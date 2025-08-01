@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Court Dashboard</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        table { border-collapse: collapse; width: 60%; margin: auto; }
+        th, td { border: 1px solid #ddd; padding: 10px; text-align: center; }
+        th { background-color: #f2f2f2; }
+        h1 { text-align: center; }
+    </style>
+</head>
+<body>
+    <h1>Court Case Dashboard</h1>
+    <table>
+        <tr>
+            <th>Court</th>
+            <th>Number of Cases</th>
+        </tr>
+        {% for item in court_data %}
+        <tr>
+            <td>{{ item.court }}</td>
+            <td>{{ item.cases }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
